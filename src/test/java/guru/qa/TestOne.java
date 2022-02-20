@@ -10,20 +10,21 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
+
 public class TestOne {
     @BeforeAll
     static void Size() {
         Configuration.browserSize = "1366x768";
     }
     @Test
-    void page() {
+    void Page(){
         open("https://demoqa.com/automation-practice-form");
 
         $("#firstName").setValue("Nastya");
         $("#lastName").setValue("Khitina");
         $("#userEmail").setValue("nasok97@mail.ru");
         $("label[for='gender-radio-2']").click();
-  //      $("#genterWrapper").$(byText("Male")).click();
+        //      $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("9277047002");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("December");
@@ -50,8 +51,7 @@ public class TestOne {
                 text("address"),
                 text("NCR Delhi"));
 
- //       sleep(17000);
-//           Selenide.closeWebDriver();
-
+        sleep(17000);
     }
+
 }
